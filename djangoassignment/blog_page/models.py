@@ -7,6 +7,7 @@ class Blogs(models.Model):
     updated_at = models.DateTimeField('Blog Updated At:', null=True, blank=True, auto_now=True)
     blog = models.TextField(max_length=15000)
     author = models.CharField(max_length=100)
+    user_file = models.ImageField(upload_to='media', blank=True)
 
     def __str__(self):
         to_return = self.author + "'s Blog Post"
